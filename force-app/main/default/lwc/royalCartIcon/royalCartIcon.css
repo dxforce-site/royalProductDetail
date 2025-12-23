@@ -1,0 +1,45 @@
+.cart-container {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--royal-navy, #0F1F3D); /* ★変数化 */
+    cursor: pointer;
+}
+
+.cart-icon {
+    width: 28px;
+    height: 28px;
+    fill: currentColor; /* 親のcolorを継承 */
+    transition: all 0.3s ease;
+}
+
+.cart-container:hover .cart-icon {
+    fill: var(--royal-gold, #C5A059); /* ★変数化 */
+}
+
+.cart-badge {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    background-color: var(--royal-gold, #C5A059); /* ★変数化 */
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    animation: pop 0.3s ease-out;
+}
+
+@keyframes pop {
+    0% { transform: scale(0); }
+    80% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}

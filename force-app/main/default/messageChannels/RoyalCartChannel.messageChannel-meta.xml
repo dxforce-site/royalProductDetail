@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>RoyalCartChannel</masterLabel>
+    <isExposed>true</isExposed>
+    <description>商品がカートに追加されたことを通知するチャネル</description>
+    
+    <lightningMessageFields>
+        <fieldName>productId</fieldName>
+        <description>追加された商品のレコードID</description>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <fieldName>productName</fieldName>
+        <description>追加された商品の名前</description>
+    </lightningMessageFields>
+</LightningMessageChannel>
