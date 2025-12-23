@@ -1,0 +1,247 @@
+/* 全体のコンテナ */
+.royal-pdp-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    font-family: 'EB Garamond', serif;
+    color: var(--royal-navy, #0F1F3D); /* ★変数化 */
+}
+
+/* パンくずリスト */
+.breadcrumbs {
+    font-size: 0.9rem;
+    color: var(--royal-text-sub, #888); /* ★変数化 */
+    margin-bottom: 2rem;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* リンクのスタイル */
+.breadcrumb-link {
+    color: var(--royal-text-sub, #888); /* ★変数化 */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.breadcrumb-link:hover {
+    color: var(--royal-gold, #C5A059); /* ★変数化 */
+    text-decoration: underline;
+}
+
+.separator {
+    color: #ccc; /* ここは汎用的な色なのでそのままでもOK */
+    font-size: 0.8rem;
+}
+
+.breadcrumbs .current {
+    color: var(--royal-navy, #0F1F3D); /* ★変数化 */
+    font-weight: bold;
+    font-family: 'Cinzel Decorative', cursive;
+}
+
+/* 2カラムレイアウト */
+.product-layout {
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* 左カラム: 画像 */
+.image-column {
+    flex: 1;
+    min-width: 300px;
+}
+
+.image-wrapper {
+    background: #fff;
+    padding: 2rem;
+    border: 1px solid var(--royal-border, #E0E0E0); /* ★変数化 */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-wrapper img {
+    max-width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: contain;
+}
+
+/* 右カラム: 情報 */
+.info-column {
+    flex: 1;
+    min-width: 300px;
+}
+
+.product-category {
+    font-family: 'Cinzel Decorative', cursive;
+    color: var(--royal-gold, #C5A059); /* ★変数化 */
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.product-title {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    color: var(--royal-navy, #0F1F3D); /* ★変数化 */
+}
+
+.product-code {
+    font-size: 0.9rem;
+    color: #999;
+    margin-bottom: 2rem;
+}
+
+.product-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: #444;
+}
+
+/* 価格とアクション */
+.action-area {
+    margin-top: 1rem;
+    border-top: none;
+}
+
+.price-tag {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 2.2rem;
+    color: var(--royal-navy, #0F1F3D); /* ★変数化 */
+    margin-bottom: 1.5rem;
+}
+
+.price-tag .tax {
+    font-size: 1rem;
+    color: var(--royal-text-sub, #888); /* ★変数化 */
+    font-family: 'Lato', sans-serif;
+}
+
+/* カートボタン */
+.add-to-cart-btn {
+    background-color: var(--royal-navy, #0F1F3D); /* ★変数化 */
+    color: #fff;
+    border: none;
+    padding: 1rem 3rem;
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    font-weight: 700;
+}
+
+.add-to-cart-btn:hover {
+    background-color: var(--royal-gold, #C5A059); /* ★変数化 */
+    color: var(--royal-navy, #0F1F3D); /* ★変数化 */
+}
+
+/* タイマーセクション（スリム版） */
+.brewing-section {
+    margin: 2rem 0 0 0;
+    padding: 1rem;
+    background: var(--royal-ivory, #FDFBF7); /* ★変数化 */
+    border: 1px solid var(--royal-border, #E0E0E0); /* ★変数化 */
+    border-radius: 8px;
+}
+
+.brewing-title {
+    font-family: 'Cinzel Decorative', cursive;
+    color: var(--royal-gold, #C5A059); /* ★変数化 */
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.timer-container {
+    display: flex;
+    justify-content: center;
+}
+
+.timer-circle-wrapper {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.timer-circle-wrapper:hover {
+    transform: scale(1.05);
+}
+
+.timer-svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.timer-bg {
+    fill: none;
+    stroke: var(--royal-border, #E0E0E0); /* ★変数化 */
+    stroke-width: 5;
+}
+
+.timer-progress {
+    fill: none;
+    stroke: var(--royal-gold, #C5A059); /* ★変数化 */
+    stroke-width: 5;
+    stroke-dasharray: 283;
+    stroke-dashoffset: 0;
+    animation: countdown 180s linear forwards;
+}
+
+@keyframes countdown {
+    from { stroke-dashoffset: 0; }
+    to { stroke-dashoffset: 283; }
+}
+
+.timer-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time-text {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+    color: var(--royal-navy, #0F1F3D); /* ★変数化 */
+    font-weight: bold;
+}
+
+.label-text {
+    font-size: 0.6rem;
+    color: var(--royal-text-sub, #888); /* ★変数化 */
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+
+.ready-text {
+    font-family: 'Cinzel Decorative', cursive;
+    color: var(--royal-gold, #C5A059); /* ★変数化 */
+    font-size: 1rem;
+    animation: blink 2s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}

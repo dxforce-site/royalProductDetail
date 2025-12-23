@@ -1,0 +1,70 @@
+<template>
+    <div class="royal-pdp-container">
+        
+        <template lwc:if={isLoading}>
+            <div class="loading-spinner">
+                <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+            </div>
+        </template>
+
+        <template lwc:else>
+            <div class="breadcrumbs">
+                <a href="#" onclick={navigateToHome} class="breadcrumb-link">Home</a>
+                <span class="separator">/</span>
+                <a href="#" onclick={navigateToShop} class="breadcrumb-link">Shop</a>
+                <span class="separator">/</span>
+                <span class="current">{name}</span>
+            </div>
+
+            <div class="product-layout">
+                <div class="image-column">
+                    <div class="image-wrapper">
+                        <img src={imageUrl} alt={name} />
+                    </div>
+                </div>
+
+                <div class="info-column">
+                    <div class="product-header">
+                        <p class="product-category">{family}</p>
+                        <h1 class="product-title">{name}</h1>
+                        <p class="product-code">Item Code: {productCode}</p>
+                    </div>
+
+                    <div class="product-description">
+                        <p>{description}</p>
+                    </div>
+
+                    <div class="action-area">
+                        <p class="price-tag">{price} <span class="tax">(Tax incl.)</span></p>
+                        <button class="add-to-cart-btn" title="Add to Cart" aria-label="Add to Cart" onclick={handleAddToCart}>Add to Cart</button>
+                    </div>
+<!--
+                    <div class="brewing-section">
+                        <h3 class="brewing-title">Best Brewing Time</h3>
+                        
+                        <div class="timer-container">
+                            <div class="timer-circle-wrapper" onclick={handleStartTimer}>
+                                <svg class="timer-svg" viewBox="0 0 100 100">
+                                    <circle class="timer-bg" cx="50" cy="50" r="45"></circle>
+                                    <circle class="timer-progress" cx="50" cy="50" r="45" 
+                                            lwc:if={isBrewing}></circle>
+                                </svg>
+                                
+                                <div class="timer-text">
+                                    <template lwc:if={isFinished}>
+                                        <span class="ready-text">Ready!</span>
+                                    </template>
+                                    <template lwc:else>
+                                        <span class="time-text">{timerDisplay}</span>
+                                        <span class="label-text" lwc:if={isNotBrewing}>Click to Start</span>
+                                    </template>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+-->
+                </div>
+            </div>
+        </template>
+    </div>
+</template>
